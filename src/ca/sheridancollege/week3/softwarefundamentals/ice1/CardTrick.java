@@ -21,6 +21,9 @@ public class CardTrick {
     	int pickVal,PickSuit;
     	boolean WinResult = 0;
         Card[] magicHand = new Card[7];
+        Card luckyCard = new Card;
+        luckyCard.setValue(Math.random()*13);
+        luckyCard.setSuit(Math.random()*3);
         
         for (int i=0; i<magicHand.length; i++)
         {
