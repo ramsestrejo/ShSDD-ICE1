@@ -28,28 +28,21 @@ public class CardTrick {
             magicHand[i] = c;
         }
         
-        System.out.println("pick a card, any card. Enter the suit(first letter is capital), then the value");
-        Scanner in = new Scanner(System.in);
-        int value;
-        String suit;
-        suit = in.next();
-        value = in.nextInt();
         Boolean found = false;
-        
-        for(int i = 0; i < magicHand.length; i++) {
-            if(magicHand[i].getSuit() == suit && magicHand[i].getValue() == value){
-                System.out.println("Good Guess!Your card is in the magic hand");
-                found = true;
-            }
-        }
-        
-        if(found != true){
-            System.out.println("card not found");
-        }
         
         Card luckyCard = new Card();
         luckyCard.setValue(1);
         luckyCard.setSuit("Spades");
+        
+        for(int i = 0; i < magicHand.length; i++) {
+            if(luckyCard.getSuit() == magicHand[i].getSuit() && luckyCard.getValue() == magicHand[i].getValue()){
+                System.out.println("Good Guess!Your card is in the magic hand");
+                found = true;
+            }
+        }
+        if(found != true){
+            System.out.println("card not found");
+        }
     }
     
 }
