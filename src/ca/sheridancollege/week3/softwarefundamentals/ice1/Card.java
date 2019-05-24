@@ -47,6 +47,13 @@ public class Card {
     public void setValue(int value) {
         this.value = value;
     }
+    
+    /**
+     * @return the value
+     */
+    public String getSuits(int value) {
+        return SUITS[value];
+    }
    
    
     
