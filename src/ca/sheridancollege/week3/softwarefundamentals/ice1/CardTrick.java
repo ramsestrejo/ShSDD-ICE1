@@ -32,13 +32,13 @@ public class CardTrick {
             c.setSuit(Math.random()*3);//(Card.SUITS[insert call to random number between 0-3 here])
         }
         
-        System.out.println("Pick your nose");
-        pickVal = in.getInt();
-        System.out.println("Wipe on suit");
-        pickSuit = in.getInt();
+        //System.out.println("Pick your nose");
+        //pickVal = in.getInt();
+        //System.out.println("Wipe on suit");
+        //pickSuit = in.getInt();
         
         for (int x=0; x<magicHand.length; x++) {
-        	if (c[x].getValue == pickVal && c[x].getSuit == pickSuit) {
+        	if (c[x].getValue == luckyCard.getValue && c[x].getSuit == luckyCard.getSuit) {
         		WinResult = 1;
         		break;
         	}
