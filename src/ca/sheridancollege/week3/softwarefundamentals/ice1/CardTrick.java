@@ -46,6 +46,10 @@ public class CardTrick {
         if(found != true){
             System.out.println("card not found");
         }
+        
+        Card luckyCard = new Card();
+        luckyCard.setValue(1);
+        luckyCard.setSuit("Spades");
     }
     
 }
