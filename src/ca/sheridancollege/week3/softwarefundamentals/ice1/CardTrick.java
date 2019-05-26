@@ -1,4 +1,4 @@
-/*
+/*Modifier:Layth Mahfoodh , Student number: 991523983
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
@@ -20,6 +20,8 @@ public class CardTrick {
         for (int i=0; i<magicHand.length; i++)
         {
             Card c = new Card();
+              c.setValue((int)Math.random*13 +1);
+            c.setSuit((int) (Math.random() * 3));
             //c.setValue(insert call to random number generator here)
             //c.setSuit(Card.SUITS[insert call to random number between 0-3 here])
         }
