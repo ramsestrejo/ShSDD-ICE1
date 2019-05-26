@@ -1,5 +1,4 @@
 package ca.sheridancollege.week3.softwarefundamentals.ice1;
-import java.util.Scanner;
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -23,15 +22,19 @@ public class CardTrick {
             c.setValue((int)(Math.random()*(13-1))+1);
             c.setSuit(Card.SUITS[(int)(Math.random()*3)]);
         }
-        Scanner input = new Scanner(System.in);
+        /**Scanner input = new Scanner(System.in);
         Card user = new Card();
         System.out.println("Pick a value of your card (1 for Ace to 13 for King)");//insert code to ask the user for Card value and suit, create their card
         int value = input.nextInt();
         user.setValue(value);
-        System.out.println("Pick a suit of your card (Heart, Diamond, Spade, Club)");
+        System.out.println("Pick a suit of your card (Hearts, Diamonds, Spades, Clubs)");
         String suit = input.next();
-        user.setSuit(suit);
+        user.setSuit(suit);*/
         boolean flag = false;
+        LuckyCard user = new LuckyCard();
+        user.setValue(1);
+        user.setSuit("Diamonds");
+        
         for (int i=0; i<magicHand.length; i++)
         {
             if ((magicHand[i].getValue()==user.getValue())&&(magicHand[i].getSuit()==user.getSuit())){
